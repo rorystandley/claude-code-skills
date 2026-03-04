@@ -1,6 +1,8 @@
 ---
 name: google-site-analytics
 description: "Fetch and analyze data from Google Search Console and Google Analytics 4 for a site. Use when the user asks about: site search performance, keyword rankings, click-through rates, impressions, page indexing, crawl errors, sitemaps, traffic metrics, page views, sessions, user behavior, conversion events, realtime visitors, or any Google site monitoring. Keywords: search console, analytics, GA4, GSC, rankings, traffic, impressions, clicks, CTR, sessions, users, events."
+argument-hint: "[queries|pages|overview|realtime|sources|events|countries|devices] [--days N]"
+allowed-tools: Bash
 disable-model-invocation: false
 ---
 
