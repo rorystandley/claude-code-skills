@@ -8,14 +8,24 @@ A Claude Code skill is a folder containing a `SKILL.md` file that teaches Claude
 
 ## Installation
 
+### As a plugin (recommended)
+
+Add the plugin URL in Claude Code settings — this makes all skills available across your projects:
+
+```
+https://github.com/rorystandley/claude-code-skills
+```
+
+### Manually
+
 Copy any skill into your project's `.claude/skills/` directory:
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/claude-code-skills.git
+git clone https://github.com/rorystandley/claude-code-skills.git
 
 # Copy a skill into your project
-cp -r claude-code-skills/google-site-analytics your-project/.claude/skills/
+cp -r claude-code-skills/skills/google-site-analytics your-project/.claude/skills/
 ```
 
 Then follow the skill's own `README.md` for setup.
@@ -24,11 +34,11 @@ Then follow the skill's own `README.md` for setup.
 
 | Skill | Description |
 |---|---|
-| [google-site-analytics](./google-site-analytics) | Query Google Search Console and GA4 — rankings, traffic, events, realtime |
+| [google-site-analytics](./skills/google-site-analytics) | Query Google Search Console and GA4 — rankings, traffic, events, realtime |
 
 ## Contributing
 
-Contributions welcome. Each skill lives in its own folder and must include:
+Contributions welcome. Each skill lives in its own folder under `skills/` and must include:
 
 - `SKILL.md` — the Claude skill definition (with `name`, `description`, and usage instructions)
 - `README.md` — human-readable setup guide
