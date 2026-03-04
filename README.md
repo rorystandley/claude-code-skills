@@ -10,10 +10,10 @@ A Claude Code skill is a folder containing a `SKILL.md` file that teaches Claude
 
 ### As a plugin (recommended)
 
-Add the plugin URL in Claude Code settings — this makes all skills available across your projects:
+Run this command inside Claude Code — this makes all skills available across your projects:
 
 ```
-https://github.com/rorystandley/claude-code-skills
+/plugin install rorystandley/claude-code-skills
 ```
 
 ### Manually
