@@ -1,0 +1,5 @@
+auth/*.json
+!auth/config.example.json
+__pycache__/
+*.pyc
+.env
