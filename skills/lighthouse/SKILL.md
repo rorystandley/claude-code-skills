@@ -28,27 +28,17 @@ Look for `config.json`. If missing, follow **Step 1: Setup** below.
 
 ## Step 1: First-Time Setup
 
-### 1a. Get a Google API key
-
-The PageSpeed Insights API is free (up to 25,000 requests/day). An API key prevents rate-limiting.
-
-1. Go to https://console.cloud.google.com/
-2. Select or create a project (you can reuse the same project as the Google Analytics skill)
-3. Enable the **PageSpeed Insights API** (`pagespeedonline.googleapis.com`)
-4. Go to **APIs & Services → Credentials → Create Credentials → API key**
-5. Copy the key
-
-### 1b. Create config.json
+### 1a. Create config.json
 
 ```bash
 cp .claude/skills/lighthouse/auth/config.example.json \
    .claude/skills/lighthouse/auth/config.json
 ```
 
-Edit `config.json`:
+Edit `config.json` with your site's URLs:
 ```json
 {
-  "api_key": "YOUR_GOOGLE_API_KEY",
+  "api_key": "",
   "urls": [
     "https://your-site.com/",
     "https://your-site.com/important-page"
@@ -56,9 +46,9 @@ Edit `config.json`:
 }
 ```
 
-`urls` is used by `--report site` to audit multiple pages at once. Add your most important pages — homepage, key landing pages, high-traffic posts.
+`urls` is used by `--report site` to audit multiple pages at once. `api_key` is optional — the API works unauthenticated. Only add a key if you hit 429 rate-limit errors (free GCP API key, no service account needed).
 
-### 1c. Install dependencies
+### 1b. Install dependencies
 
 ```bash
 pip3 install -r .claude/skills/lighthouse/requirements.txt

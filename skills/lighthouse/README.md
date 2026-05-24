@@ -13,27 +13,17 @@ No local Chrome or Node.js required — uses the free PageSpeed Insights REST AP
 
 ## Setup
 
-### 1. Get a Google API key
-
-The PageSpeed Insights API is free (25,000 requests/day with a key).
-
-1. Open [Google Cloud Console](https://console.cloud.google.com/)
-2. Select or create a project (you can reuse the one you made for google-site-analytics)
-3. Go to **APIs & Services → Library**, search for **PageSpeed Insights API**, and enable it
-4. Go to **APIs & Services → Credentials → Create Credentials → API key**
-5. Copy the key
-
-### 2. Create your config file
+### 1. Create your config file
 
 ```bash
 cp auth/config.example.json auth/config.json
 ```
 
-Edit `auth/config.json`:
+Edit `auth/config.json` with your site URLs:
 
 ```json
 {
-  "api_key": "YOUR_GOOGLE_API_KEY",
+  "api_key": "",
   "urls": [
     "https://your-site.com/",
     "https://your-site.com/blog",
@@ -42,9 +32,9 @@ Edit `auth/config.json`:
 }
 ```
 
-`urls` is the list of pages audited by `--report site`. Add your homepage and key landing pages.
+`urls` is the list of pages audited by `--report site`. `api_key` is optional — the API works unauthenticated for low-volume use. If you start hitting rate limits (429 errors), add a free Google API key: GCP Console → APIs & Services → Credentials → Create API key, then enable the PageSpeed Insights API on the same project.
 
-### 3. Install dependencies
+### 2. Install dependencies
 
 ```bash
 pip3 install -r requirements.txt
