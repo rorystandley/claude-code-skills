@@ -1,4 +1,13 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(python3 *)",
+      "Bash(pip3 install *)",
+      "Bash(pip3 install)",
+      "Bash(ls *)",
+      "Bash(ls)"
+    ]
+  },
   "hooks": {
     "SessionStart": [
       {
