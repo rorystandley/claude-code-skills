@@ -35,6 +35,7 @@ Then follow the skill's own `README.md` for setup.
 | Skill | Description |
 |---|---|
 | [google-site-analytics](./skills/google-site-analytics) | Query Google Search Console and GA4 — rankings, traffic, events, realtime |
+| [lighthouse](./skills/lighthouse) | Run PageSpeed Insights audits — Lighthouse scores, Core Web Vitals, improvement opportunities |
 
 ## Contributing
 
